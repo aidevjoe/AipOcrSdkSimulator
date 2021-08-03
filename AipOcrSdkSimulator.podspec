@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'AipOcrSdkSimulator'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AipOcrSdkSimulator.'
+  s.summary          = 'AipOcrSdk for Simulator.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+AipOcrSdk framework.
                        DESC
 
   s.homepage         = 'https://github.com/aidevjoe/AipOcrSdkSimulator'
@@ -30,13 +30,15 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'AipOcrSdkSimulator/Classes/**/*'
+  s.subspec 'AipBase' do |b|
+      b.vendored_frameworks ='AipOcrSdk/AipBase.framework'
+  end
   
-  # s.resource_bundles = {
-  #   'AipOcrSdkSimulator' => ['AipOcrSdkSimulator/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'AipOcrSdk' do |s|
+      s.vendored_frameworks ='AipOcrSdk/AipOcrSdk.framework'
+  end
+  
+  s.subspec 'IdcardQuality' do |i|
+      i.vendored_frameworks ='AipOcrSdk/IdcardQuality.framework'
+  end
 end

@@ -1,0 +1,6 @@
+framework module AipOcrSdkSimulator {
+  umbrella header "AipOcrSdkSimulator-umbrella.h"
+
+  export *
+  module * { export * }
+}

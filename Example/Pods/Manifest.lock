@@ -1,0 +1,16 @@
+PODS:
+  - AipOcrSdkSimulator (0.1.0)
+
+DEPENDENCIES:
+  - AipOcrSdkSimulator (from `../`)
+
+EXTERNAL SOURCES:
+  AipOcrSdkSimulator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AipOcrSdkSimulator: 5eccc2cc39f24dcbe4cf4c3716b3a40d91fad359
+
+PODFILE CHECKSUM: 17310bef6c6c6f39a2f33f46757db1dd9564ea22
+
+COCOAPODS: 1.10.1
